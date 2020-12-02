@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorMainGreen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorMainGreen"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@color/colorMainGreen"
+                android:fontFamily="serif"
+                android:text="메모장"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/search_note"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/round_corner">
+
+                <requestFocus />
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/search"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@color/colorMainGreen"
+                android:scaleType="center"
+                android:src="@android:drawable/ic_search_category_default" />
+
+            <ImageButton
+                android:id="@+id/multiple_delete"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@color/colorMainGreen"
+
+                app:srcCompat="@android:drawable/ic_menu_delete" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:dividerHeight="4dp"
+            android:divider="@color/colorDivider"
+            android:textFilterEnabled="true"
+            android:choiceMode="multipleChoice"
+
+            />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/colorWhite"
+        android:backgroundTint="@color/colorWhite"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@color/colorMainGreen"
+        app:backgroundTint="@color/colorWhite"
+        app:fabSize="auto"
+        app:rippleColor="@color/colorWhite" />
+
+</FrameLayout>
